@@ -15,6 +15,7 @@
 		764DFB672C44A2FA00DC1AA2 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 764DFB662C44A2FA00DC1AA2 /* Base */; };
 		764DFB6F2C44A43A00DC1AA2 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 764DFB6E2C44A43A00DC1AA2 /* .gitignore */; };
 		764DFB712C44AA2900DC1AA2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 764DFB702C44AA2900DC1AA2 /* README.md */; };
+		764DFB742C44AB7B00DC1AA2 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 764DFB732C44AB7B00DC1AA2 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				764DFB742C44AB7B00DC1AA2 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +91,9 @@
 			dependencies = (
 			);
 			name = ContactsApp;
+			packageProductDependencies = (
+				764DFB732C44AB7B00DC1AA2 /* SnapKit */,
+			);
 			productName = ContactsApp;
 			productReference = 764DFB542C44A2F800DC1AA2 /* ContactsApp.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +122,9 @@
 				Base,
 			);
 			mainGroup = 764DFB4B2C44A2F800DC1AA2;
+			packageReferences = (
+				764DFB722C44AB7B00DC1AA2 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 764DFB552C44A2F800DC1AA2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -361,6 +369,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		764DFB722C44AB7B00DC1AA2 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		764DFB732C44AB7B00DC1AA2 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 764DFB722C44AB7B00DC1AA2 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		764DFB602C44A2F800DC1AA2 /* ContactsApp.xcdatamodeld */ = {
