@@ -50,8 +50,11 @@ class ViewController: UIViewController {
       $0.edges.equalTo(view.safeAreaLayoutGuide).inset(20)
     }
   }
+  
   @objc private func addButtonTapped() {
     // 추가 화면으로 이동
+    let phoneBookViewController = PhoneBookViewController()
+    self.navigationController?.pushViewController(phoneBookViewController, animated: true)
   }
 }
 

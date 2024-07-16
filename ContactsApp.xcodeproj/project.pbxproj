@@ -17,6 +17,7 @@
 		764DFB712C44AA2900DC1AA2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 764DFB702C44AA2900DC1AA2 /* README.md */; };
 		764DFB742C44AB7B00DC1AA2 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 764DFB732C44AB7B00DC1AA2 /* SnapKit */; };
 		764DFB762C44B4B500DC1AA2 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764DFB752C44B4B500DC1AA2 /* TableViewCell.swift */; };
+		764DFB7B2C464EB200DC1AA2 /* PhoneBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764DFB7A2C464EB200DC1AA2 /* PhoneBookViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		764DFB6E2C44A43A00DC1AA2 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		764DFB702C44AA2900DC1AA2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		764DFB752C44B4B500DC1AA2 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		764DFB7A2C464EB200DC1AA2 /* PhoneBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneBookViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				764DFB572C44A2F800DC1AA2 /* AppDelegate.swift */,
 				764DFB592C44A2F800DC1AA2 /* SceneDelegate.swift */,
 				764DFB5B2C44A2F800DC1AA2 /* ViewController.swift */,
+				764DFB7A2C464EB200DC1AA2 /* PhoneBookViewController.swift */,
 				764DFB632C44A2FA00DC1AA2 /* Assets.xcassets */,
 				764DFB652C44A2FA00DC1AA2 /* LaunchScreen.storyboard */,
 				764DFB682C44A2FA00DC1AA2 /* Info.plist */,
@@ -156,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				764DFB7B2C464EB200DC1AA2 /* PhoneBookViewController.swift in Sources */,
 				764DFB762C44B4B500DC1AA2 /* TableViewCell.swift in Sources */,
 				764DFB622C44A2F800DC1AA2 /* ContactsApp.xcdatamodeld in Sources */,
 				764DFB5C2C44A2F800DC1AA2 /* ViewController.swift in Sources */,
