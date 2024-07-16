@@ -39,6 +39,11 @@ class ViewController: UIViewController {
     // 네비게이션 타이틀 설정
     self.title = "친구 목록"
     
+    // Back 버튼 텍스트 설정
+    let backButton = UIBarButtonItem()
+    backButton.title = "Back"
+    navigationItem.backBarButtonItem = backButton
+    
     // 추가 버튼 설정
     addButton.setTitle("추가", for: .normal)
     addButton.addTarget(self, action: #selector(addButtonTapped), for: .touchUpInside)

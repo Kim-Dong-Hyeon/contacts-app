@@ -41,6 +41,14 @@ class PhoneBookViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     configureUI()
+    setupNavigationBar()
+  }
+  
+  private func setupNavigationBar() {
+    self.title = "연락처 추가"
+    
+    let applyButton = UIBarButtonItem(title: "적용", style: .plain, target: self, action: #selector(applyButtonTapped))
+    navigationItem.rightBarButtonItem = applyButton
   }
   
   private func configureUI() {
@@ -81,5 +89,9 @@ class PhoneBookViewController: UIViewController {
   
   @objc private func randomImageButtonTapped() {
     // 랜덤 이미지 생성 구현
+  }
+  
+  @objc private func applyButtonTapped() {
+    // 적용 버튼 구현
   }
 }
