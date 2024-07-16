@@ -67,8 +67,8 @@ final class TableViewCell: UITableViewCell {
     }
   }
   
-  public func configureCell(name: String, phoneNumber: String) {
-    nameLabel.text = name
-    phoneNumberLabel.text = phoneNumber
+  public func configureCell(contact: Contact) {
+    nameLabel.text = contact.name
+    phoneNumberLabel.text = contact.phoneNumber
   }
 }

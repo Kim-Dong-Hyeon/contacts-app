@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		764DFB582C44A2F800DC1AA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764DFB572C44A2F800DC1AA2 /* AppDelegate.swift */; };
 		764DFB5A2C44A2F800DC1AA2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764DFB592C44A2F800DC1AA2 /* SceneDelegate.swift */; };
-		764DFB5C2C44A2F800DC1AA2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764DFB5B2C44A2F800DC1AA2 /* ViewController.swift */; };
+		764DFB5C2C44A2F800DC1AA2 /* FriendsListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764DFB5B2C44A2F800DC1AA2 /* FriendsListController.swift */; };
 		764DFB622C44A2F800DC1AA2 /* ContactsApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 764DFB602C44A2F800DC1AA2 /* ContactsApp.xcdatamodeld */; };
 		764DFB642C44A2FA00DC1AA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 764DFB632C44A2FA00DC1AA2 /* Assets.xcassets */; };
 		764DFB672C44A2FA00DC1AA2 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 764DFB662C44A2FA00DC1AA2 /* Base */; };
@@ -17,14 +17,17 @@
 		764DFB712C44AA2900DC1AA2 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 764DFB702C44AA2900DC1AA2 /* README.md */; };
 		764DFB742C44AB7B00DC1AA2 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 764DFB732C44AB7B00DC1AA2 /* SnapKit */; };
 		764DFB762C44B4B500DC1AA2 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764DFB752C44B4B500DC1AA2 /* TableViewCell.swift */; };
-		764DFB7B2C464EB200DC1AA2 /* PhoneBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764DFB7A2C464EB200DC1AA2 /* PhoneBookViewController.swift */; };
+		764DFB7B2C464EB200DC1AA2 /* PhoneBookController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764DFB7A2C464EB200DC1AA2 /* PhoneBookController.swift */; };
+		764DFB802C46FF8F00DC1AA2 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764DFB7F2C46FF8F00DC1AA2 /* Contact.swift */; };
+		764DFB822C46FFF100DC1AA2 /* PhoneBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764DFB812C46FFF100DC1AA2 /* PhoneBookView.swift */; };
+		764DFB842C4705E100DC1AA2 /* FriendsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764DFB832C4705E100DC1AA2 /* FriendsListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		764DFB542C44A2F800DC1AA2 /* ContactsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		764DFB572C44A2F800DC1AA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		764DFB592C44A2F800DC1AA2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		764DFB5B2C44A2F800DC1AA2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		764DFB5B2C44A2F800DC1AA2 /* FriendsListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListController.swift; sourceTree = "<group>"; };
 		764DFB612C44A2F800DC1AA2 /* ContactsApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ContactsApp.xcdatamodel; sourceTree = "<group>"; };
 		764DFB632C44A2FA00DC1AA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		764DFB662C44A2FA00DC1AA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -32,7 +35,10 @@
 		764DFB6E2C44A43A00DC1AA2 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		764DFB702C44AA2900DC1AA2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		764DFB752C44B4B500DC1AA2 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		764DFB7A2C464EB200DC1AA2 /* PhoneBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneBookViewController.swift; sourceTree = "<group>"; };
+		764DFB7A2C464EB200DC1AA2 /* PhoneBookController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneBookController.swift; sourceTree = "<group>"; };
+		764DFB7F2C46FF8F00DC1AA2 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		764DFB812C46FFF100DC1AA2 /* PhoneBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneBookView.swift; sourceTree = "<group>"; };
+		764DFB832C4705E100DC1AA2 /* FriendsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +61,9 @@
 				764DFB562C44A2F800DC1AA2 /* ContactsApp */,
 				764DFB552C44A2F800DC1AA2 /* Products */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		764DFB552C44A2F800DC1AA2 /* Products */ = {
 			isa = PBXGroup;
@@ -68,17 +76,92 @@
 		764DFB562C44A2F800DC1AA2 /* ContactsApp */ = {
 			isa = PBXGroup;
 			children = (
-				764DFB572C44A2F800DC1AA2 /* AppDelegate.swift */,
-				764DFB592C44A2F800DC1AA2 /* SceneDelegate.swift */,
-				764DFB5B2C44A2F800DC1AA2 /* ViewController.swift */,
-				764DFB7A2C464EB200DC1AA2 /* PhoneBookViewController.swift */,
-				764DFB632C44A2FA00DC1AA2 /* Assets.xcassets */,
-				764DFB652C44A2FA00DC1AA2 /* LaunchScreen.storyboard */,
-				764DFB682C44A2FA00DC1AA2 /* Info.plist */,
-				764DFB602C44A2F800DC1AA2 /* ContactsApp.xcdatamodeld */,
-				764DFB752C44B4B500DC1AA2 /* TableViewCell.swift */,
+				764DFB882C4716B300DC1AA2 /* Storyboard */,
+				764DFB872C47169900DC1AA2 /* Application */,
+				764DFB892C4716D500DC1AA2 /* Resources */,
+				764DFB8C2C4717C900DC1AA2 /* Data */,
+				764DFB8A2C47177100DC1AA2 /* Presentation */,
+				764DFB8B2C4717A800DC1AA2 /* Network */,
 			);
 			path = ContactsApp;
+			sourceTree = "<group>";
+		};
+		764DFB7C2C46EB6100DC1AA2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				764DFB7F2C46FF8F00DC1AA2 /* Contact.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		764DFB7D2C46EB6B00DC1AA2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				764DFB752C44B4B500DC1AA2 /* TableViewCell.swift */,
+				764DFB832C4705E100DC1AA2 /* FriendsListView.swift */,
+				764DFB812C46FFF100DC1AA2 /* PhoneBookView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		764DFB7E2C46EB7000DC1AA2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				764DFB5B2C44A2F800DC1AA2 /* FriendsListController.swift */,
+				764DFB7A2C464EB200DC1AA2 /* PhoneBookController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		764DFB872C47169900DC1AA2 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				764DFB572C44A2F800DC1AA2 /* AppDelegate.swift */,
+				764DFB592C44A2F800DC1AA2 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		764DFB882C4716B300DC1AA2 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				764DFB652C44A2FA00DC1AA2 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		764DFB892C4716D500DC1AA2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				764DFB632C44A2FA00DC1AA2 /* Assets.xcassets */,
+				764DFB682C44A2FA00DC1AA2 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		764DFB8A2C47177100DC1AA2 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				764DFB7C2C46EB6100DC1AA2 /* Model */,
+				764DFB7D2C46EB6B00DC1AA2 /* View */,
+				764DFB7E2C46EB7000DC1AA2 /* Controller */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		764DFB8B2C4717A800DC1AA2 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		764DFB8C2C4717C900DC1AA2 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				764DFB602C44A2F800DC1AA2 /* ContactsApp.xcdatamodeld */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,12 +242,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				764DFB7B2C464EB200DC1AA2 /* PhoneBookViewController.swift in Sources */,
+				764DFB7B2C464EB200DC1AA2 /* PhoneBookController.swift in Sources */,
 				764DFB762C44B4B500DC1AA2 /* TableViewCell.swift in Sources */,
 				764DFB622C44A2F800DC1AA2 /* ContactsApp.xcdatamodeld in Sources */,
-				764DFB5C2C44A2F800DC1AA2 /* ViewController.swift in Sources */,
+				764DFB5C2C44A2F800DC1AA2 /* FriendsListController.swift in Sources */,
 				764DFB582C44A2F800DC1AA2 /* AppDelegate.swift in Sources */,
+				764DFB842C4705E100DC1AA2 /* FriendsListView.swift in Sources */,
 				764DFB5A2C44A2F800DC1AA2 /* SceneDelegate.swift in Sources */,
+				764DFB822C46FFF100DC1AA2 /* PhoneBookView.swift in Sources */,
+				764DFB802C46FF8F00DC1AA2 /* Contact.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,7 +396,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4LTNHNC3S6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ContactsApp/Info.plist;
+				INFOPLIST_FILE = ContactsApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -337,7 +423,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 4LTNHNC3S6;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ContactsApp/Info.plist;
+				INFOPLIST_FILE = ContactsApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
