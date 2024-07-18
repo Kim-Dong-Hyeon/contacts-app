@@ -61,6 +61,11 @@
 7. UITableViewCell 을 클릭했을때도 연락처 추가/편집 페이지로 이동하도록 구현. 이때 네비게이션 바 영역의 타이틀은 그 연락처 이름이 노출되도록 설정. 그리고 저장되어있던 이미지,이름,전화번호가 노출되도록 설정.
 8. 테이블 셀을 통해 들어온 페이지였을 경우 “적용” 버튼 클릭 시 데이터 Create 가 아닌 데이터 Update 가 되도록 구현.
 
+9. 추가 구현 기능
+> - 친구 목록 스와이프 삭제 기능
+> - 입력 값 검증 기능 추가(Alert 발생)
+> - 다크모드 대응
+
 <br>
 
 ### Level 1
@@ -84,7 +89,7 @@
 - 캡처된 화면은 임의의(더미) dataSource 를 끼워넣어 UI 를 확인한 모습입니다.
 
 ```
-<br><br><br><br><br>
+<br><br><br><br><br><br><br>
 
 ### Level 2~3
 
@@ -113,7 +118,7 @@
 
 ```
 
-<br><br>
+<br><br><br><br>
 
 ### Level 4
 
@@ -121,7 +126,7 @@
 
 <img src="https://teamsparta.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F83c75a39-3aba-4ba4-a792-7aefe4b07895%2F2f1c0aab-911e-4401-80f6-1529ce5372f7%2FUntitled.png?table=block&id=36cea6fb-ac2b-4ebe-ac48-1e4906e210d2&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=880&userId=&cache=v2" alt="Level 4 구현 예시" width=33% align="left">
 
-<br><br>
+<br><br><br><br>
 
 ```text
 
@@ -183,9 +188,9 @@ Json Response 형태 (더 많은 정보를 받을 수 있지만 이 정도만 �
 ---
 
 - `UITableViewCell` 을 클릭했을 때도 `PhoneBookViewController` 페이지로 이동되게 합니다.
-- [ ]  이때, 추가 버튼을 눌러서 갔던 `PhoneBookViewController` 와 별개의 새로운 ViewController 클래스를 선언해서 생성하지 말아주세요. 그대로 `PhoneBookViewController` 를 사용해서 띄웁니다. 이미 구현되어있는 뷰컨트롤러를 재활용하도록 합니다.
-- [ ]  추가 버튼을 눌러서 이동했던 때와 다르게, 이미지, 이름, 전화번호가 입력된 상태로 화면이 띄워지게 해주세요. 이 요구사항의 의미가 헷갈린다면 영상을 참고해주세요.
-- [ ]  추가 버튼을 눌러서 이동했던 때와 다르게, 상단 네비게이션 바의 title 이 연락처의 이름이 되도록합니다.
+- [x]  이때, 추가 버튼을 눌러서 갔던 `PhoneBookViewController` 와 별개의 새로운 ViewController 클래스를 선언해서 생성하지 말아주세요. 그대로 `PhoneBookViewController` 를 사용해서 띄웁니다. 이미 구현되어있는 뷰컨트롤러를 재활용하도록 합니다.
+- [x]  추가 버튼을 눌러서 이동했던 때와 다르게, 이미지, 이름, 전화번호가 입력된 상태로 화면이 띄워지게 해주세요. 이 요구사항의 의미가 헷갈린다면 영상을 참고해주세요.
+- [x]  추가 버튼을 눌러서 이동했던 때와 다르게, 상단 네비게이션 바의 title 이 연락처의 이름이 되도록합니다.
 
 <br>
 
@@ -199,20 +204,10 @@ Json Response 형태 (더 많은 정보를 받을 수 있지만 이 정도만 �
 
 <br>
 
-### 🪜 Challenge - 디테일 키우기!
+### 추가 구현 기능
 
 ---
 
-🧑🏻‍💻 Level 1~8 을 구현하고도 여유가 되시는 분들은 아래 심화과정을 고민해보세요 🤓
-
-1. 포켓몬 덩치가 클 때, 이미지 원 영역을 벗어나는 경우가 있습니다. 이 때 원 밖을 벗어나지 않도록 구현해볼 수 있을까요? 원래라면 아래 포켓몬은 날개 부분이 살짝 밖으로 삐져나오게 됩니다.
-
-    <img src="https://teamsparta.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F83c75a39-3aba-4ba4-a792-7aefe4b07895%2Fedcf7578-7064-4637-83a4-d8fd4ca11be4%2FUntitled.png?table=block&id=0e3577ce-5935-4d09-823e-ee4d46da841b&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=480&userId=&cache=v2" width=33%>
-
-2. 연락처를 매우 많이 추가했을 경우(20개 이상), 테이블 뷰 스크롤을 쭉 내리다보면, 이미지가 겹쳐보이거나 텍스트가 제대로 노출되지 않는 문제를 마주칠 수 있습니다. 
-
-    → 이 문제는 `prepareForReuse` 의 개념을 사용하면 해결할 수 있습니다.
-
-    → 구현은 못하더라도 개념 공부를 추천드립니다.
-
-3. 어떻게 구현하냐에 따라서 메인화면에서 우상단의 “추가” 버튼이 잘 클릭되지 않는 함정에 빠지는 분이 있을 수도 있습니다. 이 점을 유의해주세요.
+    1. 친구 목록 스와이프 삭제 기능
+    2. 입력 값 검증 기능 추가(Alert 발생)
+    3. 다크모드 대응
