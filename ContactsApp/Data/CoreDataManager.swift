@@ -27,19 +27,18 @@ class CoreDataManager {
   }
   
   // Create
-  func createContact(name: String, phoneNumber: String) {
+  func createContact(name: String, phoneNumber: String, profileImageId: Int16) {
     let contact = Contact(context: context)
+    contact.id = UUID().uuidString
     contact.name = name
     contact.phoneNumber = phoneNumber
+    contact.profileImageId = profileImageId
     saveContext()
   }
   
   // Read All
   func fetchAllContacts() -> [Contact] {
     let fetchRequest: NSFetchRequest<Contact> = Contact.fetchRequest()
-    // 이름 순으로 정렬하도록 설정
-    let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
-    fetchRequest.sortDescriptors = [sortDescriptor]
     
     do {
       return try context.fetch(fetchRequest)
@@ -50,24 +49,26 @@ class CoreDataManager {
   }
   
   // Update
-  func updateContact(currentName: String, newName: String) {
+  func updateContact(id: String, newName: String, newPhoneNumber: String, newProfileImageId: Int16) {
     let fetchRequest: NSFetchRequest<Contact> = Contact.fetchRequest()
-    fetchRequest.predicate = NSPredicate(format: "name == %@", currentName)
+    fetchRequest.predicate = NSPredicate(format: "id == %@", id)
     do {
       let contacts = try context.fetch(fetchRequest)
-      for contact in contacts {
+      if let contact = contacts.first {
         contact.name = newName
+        contact.phoneNumber = newPhoneNumber
+        contact.profileImageId = newProfileImageId
+        saveContext()
       }
-      saveContext()
     } catch {
       print("Failed to update contact: \(error)")
     }
   }
   
   // Delete
-  func deleteContact(name: String) {
+  func deleteContact(id: String) {
     let fetchRequest: NSFetchRequest<Contact> = Contact.fetchRequest()
-    fetchRequest.predicate = NSPredicate(format: "name == %@", name)
+    fetchRequest.predicate = NSPredicate(format: "id == %@", id)
     do {
       let contacts = try context.fetch(fetchRequest)
       for contact in contacts {

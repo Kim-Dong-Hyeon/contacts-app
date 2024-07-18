@@ -24,8 +24,8 @@
 		764DFB902C4780D200DC1AA2 /* PokemonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764DFB8F2C4780D200DC1AA2 /* PokemonModel.swift */; };
 		764DFBA52C47A96000DC1AA2 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764DFBA42C47A96000DC1AA2 /* UIImageView+Extension.swift */; };
 		764DFBD62C48A96300DC1AA2 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764DFBD52C48A96300DC1AA2 /* CoreDataManager.swift */; };
-		764DFBD92C48EF9600DC1AA2 /* Contact+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764DFBD72C48EF9600DC1AA2 /* Contact+CoreDataClass.swift */; };
-		764DFBDA2C48EF9600DC1AA2 /* Contact+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764DFBD82C48EF9600DC1AA2 /* Contact+CoreDataProperties.swift */; };
+		7674BCB32C4931C4000F5C53 /* Contact+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7674BCB12C4931C4000F5C53 /* Contact+CoreDataClass.swift */; };
+		7674BCB42C4931C4000F5C53 /* Contact+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7674BCB22C4931C4000F5C53 /* Contact+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,8 +47,8 @@
 		764DFB8F2C4780D200DC1AA2 /* PokemonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonModel.swift; sourceTree = "<group>"; };
 		764DFBA42C47A96000DC1AA2 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		764DFBD52C48A96300DC1AA2 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
-		764DFBD72C48EF9600DC1AA2 /* Contact+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataClass.swift"; sourceTree = "<group>"; };
-		764DFBD82C48EF9600DC1AA2 /* Contact+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7674BCB12C4931C4000F5C53 /* Contact+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7674BCB22C4931C4000F5C53 /* Contact+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Contact+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,8 +66,8 @@
 		764DFB4B2C44A2F800DC1AA2 = {
 			isa = PBXGroup;
 			children = (
-				764DFBD72C48EF9600DC1AA2 /* Contact+CoreDataClass.swift */,
-				764DFBD82C48EF9600DC1AA2 /* Contact+CoreDataProperties.swift */,
+				7674BCB12C4931C4000F5C53 /* Contact+CoreDataClass.swift */,
+				7674BCB22C4931C4000F5C53 /* Contact+CoreDataProperties.swift */,
 				764DFB6E2C44A43A00DC1AA2 /* .gitignore */,
 				764DFB702C44AA2900DC1AA2 /* README.md */,
 				764DFB562C44A2F800DC1AA2 /* ContactsApp */,
@@ -268,8 +268,8 @@
 				764DFB7B2C464EB200DC1AA2 /* PhoneBookController.swift in Sources */,
 				764DFB762C44B4B500DC1AA2 /* TableViewCell.swift in Sources */,
 				764DFB902C4780D200DC1AA2 /* PokemonModel.swift in Sources */,
-				764DFBD92C48EF9600DC1AA2 /* Contact+CoreDataClass.swift in Sources */,
-				764DFBDA2C48EF9600DC1AA2 /* Contact+CoreDataProperties.swift in Sources */,
+				7674BCB32C4931C4000F5C53 /* Contact+CoreDataClass.swift in Sources */,
+				7674BCB42C4931C4000F5C53 /* Contact+CoreDataProperties.swift in Sources */,
 				764DFB8E2C477D4800DC1AA2 /* NetworkManager.swift in Sources */,
 				764DFB622C44A2F800DC1AA2 /* ContactsApp.xcdatamodeld in Sources */,
 				764DFB5C2C44A2F800DC1AA2 /* FriendsListController.swift in Sources */,

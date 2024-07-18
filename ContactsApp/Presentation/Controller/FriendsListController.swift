@@ -43,6 +43,7 @@ class FriendsListController: UIViewController, UITableViewDelegate, UITableViewD
   
   private func fetchContacts() {
     friends = CoreDataManager.shared.fetchAllContacts()
+    friends.sort { $0.name ?? "" < $1.name ?? "" } // 이름 순으로 정렬
     friendsListView.tableView.reloadData()
   }
   
@@ -69,6 +70,14 @@ class FriendsListController: UIViewController, UITableViewDelegate, UITableViewD
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     friends.count
+  }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let friend = friends[indexPath.row]
+    let phoneBookViewController = PhoneBookController()
+    phoneBookViewController.contact = friend
+    phoneBookViewController.delegate = self
+    self.navigationController?.pushViewController(phoneBookViewController, animated: true)
   }
   
   // PhoneBookControllerDelegate 메서드

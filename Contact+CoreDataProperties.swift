@@ -1,5 +1,5 @@
 //
-//  PersonContact+CoreDataProperties.swift
+//  Contact+CoreDataProperties.swift
 //  ContactsApp
 //
 //  Created by 김동현 on 7/18/24.
@@ -18,6 +18,9 @@ extension Contact {
 
     @NSManaged public var name: String?
     @NSManaged public var phoneNumber: String?
+//    @NSManaged public var id: UUID?
+    @NSManaged public var id: String?
+    @NSManaged public var profileImageId: Int16
 
 }
 
