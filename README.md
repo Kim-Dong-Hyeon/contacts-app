@@ -89,7 +89,7 @@
 - 캡처된 화면은 임의의(더미) dataSource 를 끼워넣어 UI 를 확인한 모습입니다.
 
 ```
-<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
 
 ### Level 2~3
 
@@ -118,7 +118,7 @@
 
 ```
 
-<br><br><br><br>
+<br><br><br><br><br><br>
 
 ### Level 4
 
@@ -126,7 +126,7 @@
 
 <img src="https://teamsparta.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2F83c75a39-3aba-4ba4-a792-7aefe4b07895%2F2f1c0aab-911e-4401-80f6-1529ce5372f7%2FUntitled.png?table=block&id=36cea6fb-ac2b-4ebe-ac48-1e4906e210d2&spaceId=83c75a39-3aba-4ba4-a792-7aefe4b07895&width=880&userId=&cache=v2" alt="Level 4 구현 예시" width=33% align="left">
 
-<br><br><br><br>
+<br><br><br>
 
 ```text
 
@@ -143,7 +143,7 @@
 
 ```
 
-<br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
 
 Json Response 형태 (더 많은 정보를 받을 수 있지만 이 정도만 받아봅시다.)
 
