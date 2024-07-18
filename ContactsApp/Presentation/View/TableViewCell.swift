@@ -70,6 +70,7 @@ final class TableViewCell: UITableViewCell {
   public func configureCell(contact: Contact) {
     nameLabel.text = contact.name
     phoneNumberLabel.text = contact.phoneNumber
+    profileImageView.image = nil // 기존 이미지 초기화
     if contact.profileImageId != 0 {
       NetworkManager.shared.fetchPokemonImage(id: Int(contact.profileImageId)) { [weak self] url in
         guard let self = self else { return }

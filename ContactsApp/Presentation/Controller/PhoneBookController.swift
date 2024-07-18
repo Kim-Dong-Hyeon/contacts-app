@@ -20,7 +20,7 @@ class PhoneBookController: UIViewController {
   
   // 편집할 연락처를 저장할 프로퍼티
   var contact: Contact?
-//  private var profileImageId: Int16?
+  private var currentProfileImageId: Int16?
   
   override func loadView() {
     phoneBookView = PhoneBookView(frame: UIScreen.main.bounds)
@@ -50,12 +50,14 @@ class PhoneBookController: UIViewController {
     if let contact = contact {
       phoneBookView.nameTextField.text = contact.name
       phoneBookView.phoneNumberTextField.text = contact.phoneNumber
+      currentProfileImageId = contact.profileImageId
       if contact.profileImageId != 0 {
         NetworkManager.shared.fetchPokemonImage(id: Int(contact.profileImageId)) { [weak self] url in
           guard let self = self else { return }
           DispatchQueue.main.async {
             if let url = url {
               self.phoneBookView.profileImageView.load(url: url)
+              self.phoneBookView.profileImageView.tag = Int(contact.profileImageId) // 이미지 ID 저장
             }
           }
         }
@@ -88,7 +90,7 @@ class PhoneBookController: UIViewController {
       return
     }
     
-    let profileImageId = Int16(phoneBookView.profileImageView.tag)
+    let profileImageId = phoneBookView.profileImageView.tag != 0 ? Int16(phoneBookView.profileImageView.tag) : currentProfileImageId ?? 0
     
     if let contact = contact {
       // 기존 연락처 업데이트
