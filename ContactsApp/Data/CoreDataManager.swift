@@ -37,6 +37,10 @@ class CoreDataManager {
   // Read All
   func fetchAllContacts() -> [Contact] {
     let fetchRequest: NSFetchRequest<Contact> = Contact.fetchRequest()
+    // 이름 순으로 정렬하도록 설정
+    let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+    fetchRequest.sortDescriptors = [sortDescriptor]
+    
     do {
       return try context.fetch(fetchRequest)
     } catch {
