@@ -51,7 +51,7 @@ class CoreDataManager {
   // Update
   func updateContact(id: String, newName: String, newPhoneNumber: String, newProfileImageId: Int16) {
     let fetchRequest: NSFetchRequest<Contact> = Contact.fetchRequest()
-    fetchRequest.predicate = NSPredicate(format: "id == %@", id)
+    fetchRequest.predicate = NSPredicate(format: "\(Contact.Key.id) == %@", id)
     do {
       let contacts = try context.fetch(fetchRequest)
       if let contact = contacts.first {
@@ -68,7 +68,7 @@ class CoreDataManager {
   // Delete
   func deleteContact(id: String) {
     let fetchRequest: NSFetchRequest<Contact> = Contact.fetchRequest()
-    fetchRequest.predicate = NSPredicate(format: "id == %@", id)
+    fetchRequest.predicate = NSPredicate(format: "\(Contact.Key.id) == %@", id)
     do {
       let contacts = try context.fetch(fetchRequest)
       for contact in contacts {
