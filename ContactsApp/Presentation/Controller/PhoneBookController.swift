@@ -8,7 +8,13 @@
 import UIKit
 import SnapKit
 
+protocol PhoneBookControllerDelegate: AnyObject {
+  func didSaveContact()
+}
+
 class PhoneBookController: UIViewController {
+  
+  weak var delegate: PhoneBookControllerDelegate?
   
   private var phoneBookView = PhoneBookView()
   
@@ -53,5 +59,13 @@ class PhoneBookController: UIViewController {
   /// 적용 버튼 액션 설정 함수
   @objc private func applyButtonTapped() {
     // 적용 버튼 구현
+    guard let name = phoneBookView.nameTextField.text, !name.isEmpty,
+          let phoneNumber = phoneBookView.phoneNumberTextField.text, !phoneNumber.isEmpty else {
+      // 입력이 비어 있을 때의 처리
+      return
+    }
+    CoreDataManager.shared.createContact(name: name, phoneNumber: phoneNumber)
+    delegate?.didSaveContact()
+    navigationController?.popViewController(animated: true)
   }
 }

@@ -8,18 +8,10 @@
 import UIKit
 import SnapKit
 
-class FriendsListController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FriendsListController: UIViewController, UITableViewDelegate, UITableViewDataSource, PhoneBookControllerDelegate {
   
   private var friendsListView = FriendsListView()
-  
-  // 임시 데이터
-  private let friends: [Contact] = [
-    Contact(name: "가나다", phoneNumber: "010-1111-2222"),
-    Contact(name: "라마바", phoneNumber: "010-3333-4444"),
-    Contact(name: "사아자", phoneNumber: "010-5555-6666"),
-    Contact(name: "차카타", phoneNumber: "010-7777-8888"),
-    Contact(name: "파하", phoneNumber: "010-9999-0000")
-  ]
+  private var friends: [Contact] = []
   
   override func loadView() {
     friendsListView = FriendsListView(frame: UIScreen.main.bounds)
@@ -31,6 +23,7 @@ class FriendsListController: UIViewController, UITableViewDelegate, UITableViewD
     setupNavigationBar()
     setupActions()
     setupTableView()
+    fetchContacts()
   }
   
   private func setupNavigationBar() {
@@ -48,9 +41,15 @@ class FriendsListController: UIViewController, UITableViewDelegate, UITableViewD
     friendsListView.tableView.dataSource = self
   }
   
+  private func fetchContacts() {
+    friends = CoreDataManager.shared.fetchAllContacts()
+    friendsListView.tableView.reloadData()
+  }
+  
   @objc private func addButtonTapped() {
     // 추가 화면으로 이동
     let phoneBookViewController = PhoneBookController()
+    phoneBookViewController.delegate = self
     self.navigationController?.pushViewController(phoneBookViewController, animated: true)
   }
   
@@ -70,5 +69,10 @@ class FriendsListController: UIViewController, UITableViewDelegate, UITableViewD
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     friends.count
+  }
+  
+  // PhoneBookControllerDelegate 메서드
+  func didSaveContact() {
+    fetchContacts()
   }
 }
