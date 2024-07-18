@@ -90,4 +90,16 @@ class FriendsListController: UIViewController, UITableViewDelegate, UITableViewD
   func didSaveContact() {
     fetchContacts()
   }
+  
+  // 스와이프로 삭제 기능 추가
+  func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    if editingStyle == .delete {
+      let friend = friends[indexPath.row]
+      if let id = friend.id {
+        CoreDataManager.shared.deleteContact(id: id)
+        friends.remove(at: indexPath.row)
+        tableView.deleteRows(at: [indexPath], with: .automatic)
+      }
+    }
+  }
 }
