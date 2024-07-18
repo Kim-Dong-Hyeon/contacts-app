@@ -43,7 +43,13 @@ class FriendsListController: UIViewController, UITableViewDelegate, UITableViewD
   
   private func fetchContacts() {
     friends = CoreDataManager.shared.fetchAllContacts()
-    friends.sort { $0.name ?? "" < $1.name ?? "" } // 이름 순으로 정렬
+    // 이름 순으로 정렬, 만약 이름 같을 경우 전화번호순으로 검색
+    friends.sort {
+      if $0.name == $1.name {
+        return $0.phoneNumber ?? "" < $1.phoneNumber ?? ""
+      }
+      return $0.name ?? "" < $1.name ?? ""
+    }
     friendsListView.tableView.reloadData()
   }
   
