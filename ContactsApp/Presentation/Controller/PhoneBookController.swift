@@ -81,12 +81,46 @@ class PhoneBookController: UIViewController {
     }
   }
   
+  /// 이름 입력값을 검증하는 함수
+  private func validateName(_ name: String) -> Bool {
+    return !name.isEmpty
+  }
+  
+  /// 전화번호 입력값을 검증하는 함수
+  private func validatePhoneNumber(_ phoneNumber: String) -> Bool {
+    let phoneNumberRegex = "^\\d{3}-\\d{4}-\\d{4}$"
+    let phoneNumberTest = NSPredicate(format: "SELF MATCHES %@", phoneNumberRegex)
+    return phoneNumberTest.evaluate(with: phoneNumber)
+  }
+  
+  /// 에러를 알리는 Alert를 띄우는 함수
+  private func showAlert(message: String) {
+    let alert = UIAlertController(title: "입력 오류", message: message, preferredStyle: .alert)
+    alert.addAction(UIAlertAction(title: "확인", style: .default))
+    present(alert, animated: true)
+  }
+  
   /// 적용 버튼 액션 설정 함수
   @objc private func applyButtonTapped() {
     // 적용 버튼 구현
-    guard let name = phoneBookView.nameTextField.text, !name.isEmpty,
-          let phoneNumber = phoneBookView.phoneNumberTextField.text, !phoneNumber.isEmpty else {
-      // 입력이 비어 있을 때의 처리
+    guard let name = phoneBookView.nameTextField.text,
+          let phoneNumber = phoneBookView.phoneNumberTextField.text else {
+      return
+    }
+    
+    // 입력이 비어 있을 때의 처리
+    if !validateName(name) && !validatePhoneNumber(phoneNumber) {
+      showAlert(message: "\n정보를 입력해주세요.")
+      return
+    }
+    
+    if !validateName(name) {
+      showAlert(message: "\n이름을 입력해주세요.")
+      return
+    }
+    
+    if !validatePhoneNumber(phoneNumber) {
+      showAlert(message: "\n올바른 전화번호 형식으로 입력해주세요.\n예시: 010-1234-5678")
       return
     }
     
