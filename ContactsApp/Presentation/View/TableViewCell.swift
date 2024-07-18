@@ -24,13 +24,27 @@ final class TableViewCell: UITableViewCell {
   private let nameLabel: UILabel = {
     let label = UILabel()
     label.font = .boldSystemFont(ofSize: 16)
-    label.textColor = .darkGray
+    label.textColor = UIColor { tc in
+      switch tc.userInterfaceStyle {
+      case .dark:
+        return UIColor.lightGray
+      default:
+        return UIColor.darkGray
+      }
+    }
     return label
   }()
   private let phoneNumberLabel: UILabel = {
     let label = UILabel()
     label.font = .boldSystemFont(ofSize: 16)
-    label.textColor = .darkGray
+    label.textColor = UIColor { tc in
+      switch tc.userInterfaceStyle {
+      case .dark:
+        return UIColor.lightGray
+      default:
+        return UIColor.darkGray
+      }
+    }
     return label
   }()
   

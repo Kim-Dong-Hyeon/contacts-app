@@ -31,7 +31,7 @@ class FriendsListView: UIView {
   }
   
   private func configureUI() {
-    self.backgroundColor = .white
+    self.backgroundColor = .systemBackground
     
     [tableView].forEach { self.addSubview($0) }
     
