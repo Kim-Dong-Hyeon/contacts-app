@@ -89,7 +89,7 @@
 - 캡처된 화면은 임의의(더미) dataSource 를 끼워넣어 UI 를 확인한 모습입니다.
 
 ```
-<br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
 
 ### Level 2~3
 
@@ -118,7 +118,7 @@
 
 ```
 
-<br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
 
 ### Level 4
 
@@ -143,7 +143,7 @@
 
 ```
 
-<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
 
 Json Response 형태 (더 많은 정보를 받을 수 있지만 이 정도만 받아봅시다.)
 
