@@ -15,20 +15,26 @@ class NetworkManager {
   private func fetchData<T: Decodable>(url: URL, completion: @escaping (T?) -> Void) {
     let session = URLSession(configuration: .default)
     session.dataTask(with: URLRequest(url: url)) { data, response, error in
-      guard let data, error == nil else {
-        print("데이터 로드 실패")
+      if let error = error {
+        print("데이터 로드 실패: \(error.localizedDescription)")
+        completion(nil)
+        return
+      }
+      guard let data = data else {
+        print("데이터가 없습니다.")
         completion(nil)
         return
       }
       // http status code 성공 범위는 200번대
       let successRange = 200..<300
       if let response = response as? HTTPURLResponse, successRange.contains(response.statusCode) {
-        guard let decodedData = try? JSONDecoder().decode(T.self, from: data) else {
-          print("JSON 디코딩 실패")
+        do {
+          let decodedData = try JSONDecoder().decode(T.self, from: data)
+          completion(decodedData)
+        } catch {
+          print("JSON 디코딩 실패: \(error.localizedDescription)")
           completion(nil)
-          return
         }
-        completion(decodedData)
       } else {
         print("응답 오류")
         completion(nil)
