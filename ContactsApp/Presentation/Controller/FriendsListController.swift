@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  FriendsListController.swift
 //  ContactsApp
 //
 //  Created by 김동현 on 7/15/24.
@@ -50,7 +50,7 @@ class FriendsListController: UIViewController, UITableViewDelegate, UITableViewD
   
   @objc private func addButtonTapped() {
     // 추가 화면으로 이동
-    let phoneBookViewController = PhoneBookViewController()
+    let phoneBookViewController = PhoneBookController()
     self.navigationController?.pushViewController(phoneBookViewController, animated: true)
   }
   

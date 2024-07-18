@@ -21,6 +21,9 @@
 		764DFB802C46FF8F00DC1AA2 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764DFB7F2C46FF8F00DC1AA2 /* Contact.swift */; };
 		764DFB822C46FFF100DC1AA2 /* PhoneBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764DFB812C46FFF100DC1AA2 /* PhoneBookView.swift */; };
 		764DFB842C4705E100DC1AA2 /* FriendsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764DFB832C4705E100DC1AA2 /* FriendsListView.swift */; };
+		764DFB8E2C477D4800DC1AA2 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764DFB8D2C477D4800DC1AA2 /* NetworkManager.swift */; };
+		764DFB902C4780D200DC1AA2 /* PokemonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764DFB8F2C4780D200DC1AA2 /* PokemonModel.swift */; };
+		764DFBA52C47A96000DC1AA2 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764DFBA42C47A96000DC1AA2 /* UIImageView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,9 @@
 		764DFB7F2C46FF8F00DC1AA2 /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		764DFB812C46FFF100DC1AA2 /* PhoneBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneBookView.swift; sourceTree = "<group>"; };
 		764DFB832C4705E100DC1AA2 /* FriendsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListView.swift; sourceTree = "<group>"; };
+		764DFB8D2C477D4800DC1AA2 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		764DFB8F2C4780D200DC1AA2 /* PokemonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonModel.swift; sourceTree = "<group>"; };
+		764DFBA42C47A96000DC1AA2 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				764DFB7F2C46FF8F00DC1AA2 /* Contact.swift */,
+				764DFB8F2C4780D200DC1AA2 /* PokemonModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -133,6 +140,7 @@
 		764DFB892C4716D500DC1AA2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				764DFBA32C47A8FD00DC1AA2 /* Extensions */,
 				764DFB632C44A2FA00DC1AA2 /* Assets.xcassets */,
 				764DFB682C44A2FA00DC1AA2 /* Info.plist */,
 			);
@@ -152,6 +160,7 @@
 		764DFB8B2C4717A800DC1AA2 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				764DFB8D2C477D4800DC1AA2 /* NetworkManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -162,6 +171,14 @@
 				764DFB602C44A2F800DC1AA2 /* ContactsApp.xcdatamodeld */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		764DFBA32C47A8FD00DC1AA2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				764DFBA42C47A96000DC1AA2 /* UIImageView+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,8 +261,11 @@
 			files = (
 				764DFB7B2C464EB200DC1AA2 /* PhoneBookController.swift in Sources */,
 				764DFB762C44B4B500DC1AA2 /* TableViewCell.swift in Sources */,
+				764DFB902C4780D200DC1AA2 /* PokemonModel.swift in Sources */,
+				764DFB8E2C477D4800DC1AA2 /* NetworkManager.swift in Sources */,
 				764DFB622C44A2F800DC1AA2 /* ContactsApp.xcdatamodeld in Sources */,
 				764DFB5C2C44A2F800DC1AA2 /* FriendsListController.swift in Sources */,
+				764DFBA52C47A96000DC1AA2 /* UIImageView+Extension.swift in Sources */,
 				764DFB582C44A2F800DC1AA2 /* AppDelegate.swift in Sources */,
 				764DFB842C4705E100DC1AA2 /* FriendsListView.swift in Sources */,
 				764DFB5A2C44A2F800DC1AA2 /* SceneDelegate.swift in Sources */,

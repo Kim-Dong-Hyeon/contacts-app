@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// 연락처 모델 정의
 struct Contact {
   let name: String
   let phoneNumber: String
