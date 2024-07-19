@@ -15,7 +15,7 @@ class FriendsListView: UIView {
     button.setTitle("추가", for: .normal)
     return button
   }()
-   let tableView: UITableView = {
+  let tableView: UITableView = {
     let tableView = UITableView()
     tableView.register(TableViewCell.self, forCellReuseIdentifier: TableViewCell.id)
     return tableView

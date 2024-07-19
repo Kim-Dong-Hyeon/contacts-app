@@ -49,7 +49,7 @@ class PhoneBookView: UIView {
   
   private func configureUI() {
     self.backgroundColor = .systemBackground
-
+    
     [
       profileImageView,
       randomImageButton,

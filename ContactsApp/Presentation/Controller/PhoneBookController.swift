@@ -69,7 +69,7 @@ class PhoneBookController: UIViewController {
   @objc private func randomImageButtonTapped() {
     // 랜덤 이미지 생성 구현
     let randomNumber = Int.random(in: 1...1000)
-//    profileImageId = Int16(randomNumber)
+    //    profileImageId = Int16(randomNumber)
     NetworkManager.shared.fetchPokemonImage(id: randomNumber) { [weak self] url in
       guard let self = self else { return }
       DispatchQueue.main.async {

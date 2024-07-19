@@ -17,7 +17,7 @@ class FriendsListController: UIViewController, UITableViewDelegate, UITableViewD
     friendsListView = FriendsListView(frame: UIScreen.main.bounds)
     self.view = friendsListView
   }
-
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     setupNavigationBar()
@@ -64,7 +64,7 @@ class FriendsListController: UIViewController, UITableViewDelegate, UITableViewD
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     80
   }
-
+  
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = tableView.dequeueReusableCell(withIdentifier: TableViewCell.id) as? TableViewCell else {
       return UITableViewCell()
